@@ -1,0 +1,103 @@
+.contact-form {
+    padding: 0 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80vh;
+    margin-top: 4rem;
+}
+
+/* Styling untuk teks di sebelah kiri */
+.w-left .awesome {
+    display: flex;
+    flex-direction: column;
+    gap: -5rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: auto;
+    margin-top: -10rem; /* Mengurangi jarak margin-top untuk menaikkan teks */
+}
+
+.w-left .awesome span {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.w-left .awesome span:nth-child(2) {
+    color: var(--orange); /* Warna untuk Contact Me */
+}
+
+/* Styling untuk form agar lebih besar */
+.c-right {
+    width: 80%; /* Perbesar lebar form */
+    padding: 10px; /* Tambah ruang dalam */
+    box-sizing: border-box; /* Pastikan padding tidak menambah ukuran total */
+}
+
+.c-right > form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 0.5rem; 
+    width: 100%;
+}
+
+.c-right .user {
+    width: 100%; /* Input mengikuti lebar form */
+    height: 3.5rem; /* Tinggi input lebih besar */
+    padding: 0.5rem 1rem; /* Ruang dalam lebih besar */
+    outline: none;
+    border: 2px solid var(--orange);
+    border-radius: 12px; /* Estetika */
+    font-size: 18px; /* Ukuran font lebih besar */
+}
+
+textarea {
+    width: 100%; /* Lebar textarea mengikuti form */
+    height: 10rem; /* Tinggi khusus untuk textarea */
+    padding: 0.5rem 1rem;
+    font-size: 18px; /* Ukuran teks */
+    border-radius: 12px; /* Estetika */
+    resize: none; /* Matikan fitur resize */
+    border: 2px solid var(--orange);
+}
+
+
+/* Styling untuk tombol */
+.c-right .button {
+    width: 20%; /* Tombol menyesuaikan lebar form */
+    height: 2.5rem; /* Tinggi tombol lebih besar */
+    border-radius: 25px; /* Estetika */
+    background: var(--orange);
+    color: white;
+    cursor: pointer;
+    font-size: 18px; /* Ukuran font tombol lebih besar */
+    font-weight: bold;
+}
+
+/* Blur styling */
+.c-blur1 {
+    position: absolute;
+    top: -3rem;
+    right: -4rem;
+    width: 18rem;
+    height: 14rem;
+    filter: blur(72px);
+    background: var(--purple);
+    z-index: -1;
+}
+
+/* Responsif untuk layar lebih kecil */
+@media (max-width: 768px) {
+    .c-right {
+        width: 100%; /* Form memenuhi layar di perangkat kecil */
+        padding: 20px; /* Kurangi padding untuk layar kecil */
+    }
+
+    .c-right .user, 
+    .c-right .button, 
+    textarea {
+        width: 100%; /* Pastikan elemen mengikuti lebar container */
+    }
+}
